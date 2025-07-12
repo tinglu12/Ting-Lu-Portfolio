@@ -1,4 +1,3 @@
-import { Github } from "lucide-react";
 
 export const projects = [
     {

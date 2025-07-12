@@ -1,7 +1,6 @@
 import React from 'react'
 import ProjectItem from './ProjectItem'
 import { projects } from '@/data/projects'
-import { Button } from './ui/button'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
