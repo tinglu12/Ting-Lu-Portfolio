@@ -1,8 +1,122 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ===== SKY & OCEAN THEME CONFIGURATION ===== */
+/* 
+  Enhanced Sky & Ocean Palette:
+  
+  Original Ocean Colors:
+  - BEE9E8: Very light blue (background)
+  - 62B6CB: Medium blue (primary)
+  - 1B4965: Dark blue (text)
+  - CAE9FF: Light blue (accent)
+  - 5FA8D3: Medium blue (secondary)
+  
+  New Sky Colors:
+  - 87CEEB: Sky blue (sky accent)
+  - F0F8FF: Alice blue (cloud white)
+  - 4682B4: Steel blue (sky primary)
+  - B0E0E6: Powder blue (sky secondary)
+  - 1E90FF: Dodger blue (bright sky)
+  
+  To customize the sky & ocean theme, modify the values below:
+  
+  LIGHT MODE COLORS:
+  - sky-bg: Main background color (very light sky blue)
+  - sky-surface: Card/popover backgrounds (slightly darker than bg)
+  - sky-primary: Main brand color (sky blue)
+  - sky-secondary: Secondary elements (powder blue)
+  - sky-accent: Accent color (bright sky blue)
+  - sky-text: Main text color (dark blue-gray)
+  - sky-muted: Muted text color (medium blue-gray)
+  - sky-border: Border color (light sky blue)
+  
+  DARK MODE COLORS:
+  - sky-bg-dark: Dark background (deep night sky)
+  - sky-surface-dark: Dark card backgrounds
+  - sky-primary-dark: Bright sky blue for dark mode
+  - sky-secondary-dark: Dark secondary elements
+  - sky-accent-dark: Dark mode accent (bright sky)
+  - sky-text-dark: Light text for dark mode
+  - sky-muted-dark: Muted text for dark mode
+  - sky-border-dark: Dark borders
+  
+  CHART COLORS (both modes):
+  - sky-chart-1 through sky-chart-5: Data visualization colors
+*/
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Sky & Ocean Theme Base Colors - Light Mode */
+  --sky-bg: oklch(0.97 0.01 210);           /* F0F8FF - Alice blue background */
+  --sky-surface: oklch(0.94 0.01 210);      /* Slightly darker than bg */
+  --sky-primary: oklch(0.60 0.15 220);      /* 4682B4 - Steel blue primary */
+  --sky-secondary: oklch(0.85 0.05 210);    /* B0E0E6 - Powder blue secondary */
+  --sky-accent: oklch(0.65 0.20 230);       /* 1E90FF - Dodger blue accent */
+  --sky-text: oklch(0.25 0.05 220);         /* 1B4965 - Dark blue text */
+  --sky-muted: oklch(0.55 0.05 220);        /* Medium blue-gray muted text */
+  --sky-border: oklch(0.88 0.03 210);       /* Light sky blue borders */
+  
+  /* Ocean Theme Base Colors - Light Mode (keeping your original) */
+  --ocean-bg: oklch(0.95 0.02 200);         /* BEE9E8 - Very light blue background */
+  --ocean-surface: oklch(0.92 0.02 200);    /* Slightly darker than bg */
+  --ocean-primary: oklch(0.65 0.12 200);    /* 62B6CB - Medium blue primary */
+  --ocean-secondary: oklch(0.70 0.10 210);  /* 5FA8D3 - Medium blue secondary */
+  --ocean-accent: oklch(0.88 0.05 210);     /* CAE9FF - Light blue accent */
+  --ocean-text: oklch(0.25 0.05 220);       /* 1B4965 - Dark blue text */
+  --ocean-muted: oklch(0.55 0.05 220);      /* Medium blue-gray muted text */
+  --ocean-border: oklch(0.85 0.03 200);     /* Light blue-gray borders */
+  
+  /* Sky & Ocean Theme Base Colors - Dark Mode */
+  --sky-bg-dark: oklch(0.08 0.02 230);      /* Deep night sky background */
+  --sky-surface-dark: oklch(0.12 0.02 230); /* Slightly lighter than bg */
+  --sky-primary-dark: oklch(0.70 0.18 220); /* Bright steel blue for dark mode */
+  --sky-secondary-dark: oklch(0.65 0.10 210); /* Bright powder blue for dark mode */
+  --sky-accent-dark: oklch(0.75 0.25 230);  /* Bright dodger blue for dark mode */
+  --sky-text-dark: oklch(0.90 0.02 210);    /* Light text for dark mode */
+  --sky-muted-dark: oklch(0.70 0.05 220);   /* Muted text for dark mode */
+  --sky-border-dark: oklch(0.25 0.03 230);  /* Dark borders */
+  
+  --ocean-bg-dark: oklch(0.10 0.03 220);    /* Darker version of 1B4965 */
+  --ocean-surface-dark: oklch(0.15 0.03 220); /* Slightly lighter than bg */
+  --ocean-primary-dark: oklch(0.70 0.15 200); /* Brighter version of 62B6CB */
+  --ocean-secondary-dark: oklch(0.60 0.12 210); /* Brighter version of 5FA8D3 */
+  --ocean-accent-dark: oklch(0.75 0.08 210);   /* Brighter version of CAE9FF */
+  --ocean-text-dark: oklch(0.90 0.02 200);     /* Light text for dark mode */
+  --ocean-muted-dark: oklch(0.70 0.05 220);    /* Muted text for dark mode */
+  --ocean-border-dark: oklch(0.25 0.03 220);   /* Dark borders */
+  
+  /* Sky & Ocean Chart Colors - Light Mode */
+  --sky-chart-1: oklch(0.60 0.15 220);      /* 4682B4 - Steel blue */
+  --sky-chart-2: oklch(0.65 0.20 230);      /* 1E90FF - Dodger blue */
+  --sky-chart-3: oklch(0.85 0.05 210);      /* B0E0E6 - Powder blue */
+  --sky-chart-4: oklch(0.70 0.12 200);      /* 62B6CB - Medium blue */
+  --sky-chart-5: oklch(0.75 0.10 210);      /* 5FA8D3 - Medium blue */
+  
+  --ocean-chart-1: oklch(0.65 0.12 200);    /* 62B6CB - Medium blue */
+  --ocean-chart-2: oklch(0.70 0.10 210);    /* 5FA8D3 - Medium blue */
+  --ocean-chart-3: oklch(0.88 0.05 210);    /* CAE9FF - Light blue */
+  --ocean-chart-4: oklch(0.25 0.05 220);    /* 1B4965 - Dark blue */
+  --ocean-chart-5: oklch(0.95 0.02 200);    /* BEE9E8 - Very light blue */
+  
+  /* Sky & Ocean Chart Colors - Dark Mode */
+  --sky-chart-1-dark: oklch(0.70 0.18 220); /* Bright steel blue */
+  --sky-chart-2-dark: oklch(0.75 0.25 230); /* Bright dodger blue */
+  --sky-chart-3-dark: oklch(0.80 0.10 210); /* Bright powder blue */
+  --sky-chart-4-dark: oklch(0.75 0.15 200); /* Bright medium blue */
+  --sky-chart-5-dark: oklch(0.80 0.12 210); /* Bright medium blue */
+  
+  --ocean-chart-1-dark: oklch(0.70 0.15 200);  /* Bright version of 62B6CB */
+  --ocean-chart-2-dark: oklch(0.75 0.12 210);  /* Bright version of 5FA8D3 */
+  --ocean-chart-3-dark: oklch(0.80 0.08 210);  /* Bright version of CAE9FF */
+  --ocean-chart-4-dark: oklch(0.60 0.10 220);  /* Medium version of 1B4965 */
+  --ocean-chart-5-dark: oklch(0.85 0.05 200);  /* Bright version of BEE9E8 */
+  
+  /* Other Theme Properties */
+  --radius: 0.625rem;
+  --destructive: oklch(0.65 0.25 15);
+  --destructive-dark: oklch(0.75 0.20 15);
 }
 
 @theme inline {
@@ -10,17 +124,116 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Light Mode Theme - Sky & Ocean Blend */
+:root {
+  --background: var(--sky-bg);
+  --foreground: var(--sky-text);
+  --card: var(--sky-surface);
+  --card-foreground: var(--sky-text);
+  --popover: var(--sky-surface);
+  --popover-foreground: var(--sky-text);
+  --primary: var(--sky-primary);
+  --primary-foreground: var(--sky-bg);
+  --secondary: var(--sky-secondary);
+  --secondary-foreground: var(--sky-text);
+  --muted: var(--sky-secondary);
+  --muted-foreground: var(--sky-muted);
+  --accent: var(--sky-accent);
+  --accent-foreground: var(--sky-text);
+  --destructive: var(--destructive);
+  --border: var(--sky-border);
+  --input: var(--sky-border);
+  --ring: var(--sky-primary);
+  --chart-1: var(--sky-chart-1);
+  --chart-2: var(--sky-chart-2);
+  --chart-3: var(--sky-chart-3);
+  --chart-4: var(--sky-chart-4);
+  --chart-5: var(--sky-chart-5);
+  --sidebar: var(--sky-surface);
+  --sidebar-foreground: var(--sky-text);
+  --sidebar-primary: var(--sky-primary);
+  --sidebar-primary-foreground: var(--sky-bg);
+  --sidebar-accent: var(--sky-accent);
+  --sidebar-accent-foreground: var(--sky-text);
+  --sidebar-border: var(--sky-border);
+  --sidebar-ring: var(--sky-primary);
+}
+
+/* Dark Mode Theme - Sky & Ocean Blend */
+.dark {
+  --background: var(--sky-bg-dark);
+  --foreground: var(--sky-text-dark);
+  --card: var(--sky-surface-dark);
+  --card-foreground: var(--sky-text-dark);
+  --popover: var(--sky-surface-dark);
+  --popover-foreground: var(--sky-text-dark);
+  --primary: var(--sky-primary-dark);
+  --primary-foreground: var(--sky-bg-dark);
+  --secondary: var(--sky-secondary-dark);
+  --secondary-foreground: var(--sky-text-dark);
+  --muted: var(--sky-secondary-dark);
+  --muted-foreground: var(--sky-muted-dark);
+  --accent: var(--sky-accent-dark);
+  --accent-foreground: var(--sky-text-dark);
+  --destructive: var(--destructive-dark);
+  --border: var(--sky-border-dark);
+  --input: var(--sky-border-dark);
+  --ring: var(--sky-primary-dark);
+  --chart-1: var(--sky-chart-1-dark);
+  --chart-2: var(--sky-chart-2-dark);
+  --chart-3: var(--sky-chart-3-dark);
+  --chart-4: var(--sky-chart-4-dark);
+  --chart-5: var(--sky-chart-5-dark);
+  --sidebar: var(--sky-surface-dark);
+  --sidebar-foreground: var(--sky-text-dark);
+  --sidebar-primary: var(--sky-primary-dark);
+  --sidebar-primary-foreground: var(--sky-bg-dark);
+  --sidebar-accent: var(--sky-accent-dark);
+  --sidebar-accent-foreground: var(--sky-text-dark);
+  --sidebar-border: var(--sky-border-dark);
+  --sidebar-ring: var(--sky-primary-dark);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
 }
