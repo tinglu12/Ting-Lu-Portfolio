@@ -20,7 +20,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
         <CardTitle>
           <div className='flex flex-col gap-2'>
             <a href={project.website} target='_blank' rel='noopener noreferrer'>
-              <Image src={project.img} alt={project.name} width={600} height={400} className='rounded-md' />
+              <Image src={project.img} alt={project.name} width={600} height={350} className='rounded-md max-h-[150px] w-full object-cover' />
             </a>
             <h3 className='text-2xl font-bold text-primary'>{project.name}</h3>
             <p className='text-sm text-muted-foreground'>{project.description}</p>

@@ -15,5 +15,20 @@ export const projects = [
         website: "https://www.partygraph.app/",
         github: "https://github.com/tinglu12/partygraph-front",
     },
+    {
+        name: "DinoSnap",
+        description: "DinoSnap is a VR game that allows you to take photos of dinosaurs.",
+        img: "/projects/bigdino.png",
+        tech: ["Unity", "C#", "GitHub"],
+        website: "https://eecs498-group6.netlify.app/",
+    },
+    {
+        name: "Virtuwear",
+        description: "Virtuwear is a platform that recommends outfits based on user prompts.",
+        img: "/projects/virtuwear.png",
+        tech: ["React", "SQLite", "Python", "Flask", "OpenAI", "GitHub"],
+        website: "https://devpost.com/software/virtuwear",
+        github: "https://github.com/qwopp/ai-wardrobe",
+    }
     
 ]

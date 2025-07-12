@@ -16,8 +16,8 @@ const Projects = () => {
               </Link>
             </div>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            {projects.map((project) => (
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
+            {projects.slice(0, 2).map((project) => (
                 <ProjectItem key={project.name} project={project} />
             ))}
         </div>

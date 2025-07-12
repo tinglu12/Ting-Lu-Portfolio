@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Mail, File, Github, Linkedin } from 'lucide-react'
+import { email, github, linkedin } from '@/data/info'
 
 
 const Info = () => {
@@ -23,17 +24,17 @@ const Info = () => {
                     </a>
                 </Button>
                 <Button variant="outline" className="flex flex-row items-center justify-center gap-2 w-fit" asChild>
-                    <a href="https://github.com/tinglu12" target="_blank" rel="noopener noreferrer">
+                    <a href={github} target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4" />
                     </a>
                 </Button>
                 <Button variant="outline" className="flex flex-row items-center justify-center gap-2 w-fit" asChild>
-                    <a href="https://www.linkedin.com/in/tingxlu/" target="_blank" rel="noopener noreferrer">
+                    <a href={linkedin} target="_blank" rel="noopener noreferrer">
                         <Linkedin className="w-4 h-4" />
                     </a>
                 </Button>
                 <Button variant="outline" className="flex flex-row items-center justify-center gap-2 w-fit" asChild>
-                    <a href="mailto:tinglu30@gmail.com" >
+                    <a href={`mailto:${email}`} >
                         <Mail className="w-4 h-4" />
                     </a>
                 </Button>                
