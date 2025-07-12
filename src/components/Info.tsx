@@ -12,8 +12,8 @@ const Info = () => {
             <h1 className="text-6xl font-bold text-primary">
                 Ting Lu
             </h1>            
-            <h2 className="text-2xl font-bold text-muted-foreground">
-                Full Stack Developer | Software Engineer | Ocean Enjoyer
+            <h2 className="text-[1.4rem] font-bold text-muted-foreground">
+                Full Stack Dev | Software Engineer | Ocean Enjoyer
             </h2>
             <div className="flex flex-row items-center gap-4">
 

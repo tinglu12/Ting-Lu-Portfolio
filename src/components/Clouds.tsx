@@ -24,7 +24,7 @@ export default function Clouds() {
       size: Math.random() * 80 + 60, // Random size between 60-140px
       opacity: Math.random() * 0.4 + 0.6, // Random opacity between 0.6-1.0
       speed: Math.random() * 0.3 + 0.1, // Random speed between 0.1-0.4 (slower)
-      delay: Math.random() * 10, // Random delay to stagger animations
+      delay: Math.random() * 1, // Random delay to stagger animations
     }));
 
     setClouds(initialClouds);
