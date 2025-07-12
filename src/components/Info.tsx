@@ -6,8 +6,8 @@ import { Mail, File, Github, Linkedin } from 'lucide-react'
 
 const Info = () => {
   return (
-    <div className="flex flex-row justify-between items-start h-screen w-full gap-8">
-        <div className="flex flex-col justify-start gap-2">
+    <div className="flex flex-row justify-between items-start w-full gap-8">
+        <div className="flex flex-col justify-start gap-4">
             <h1 className="text-6xl font-bold text-primary">
                 Ting Lu
             </h1>            

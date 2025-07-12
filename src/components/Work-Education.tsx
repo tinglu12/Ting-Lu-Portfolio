@@ -5,7 +5,7 @@ import Timeline from './Timeline'
 
 const WorkEducation = () => {
   return (
-    <div className='flex flex-col items-center h-screen gap-8 w-full'>
+    <div className='flex flex-col items-center gap-8 w-full'>
         <Tabs defaultValue="work" className='w-full'>
             <TabsList className='w-full'>
                 <TabsTrigger value="work" className='data-[state=active]:bg-primary data-[state=active]:text-white '>Work</TabsTrigger>
