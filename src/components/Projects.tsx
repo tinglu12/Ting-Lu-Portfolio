@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react'
 
 const Projects = () => {
   return (
-    <div className='flex flex-col gap-8 w-full'>
+    <section className='flex flex-col gap-8 w-full'>
         <div className='flex flex-row justify-between items-center'>
             <h2 className='text-4xl font-bold text-primary'>Projects</h2>
             <div className='flex flex-row gap-2'>
@@ -21,7 +21,7 @@ const Projects = () => {
                 <ProjectItem key={project.name} project={project} />
             ))}
         </div>
-    </div>
+    </section>
   )
 }
 
