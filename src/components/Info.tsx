@@ -33,7 +33,7 @@ const Info = () => {
                     </a>
                 </Button>
                 <Button variant="outline" className="flex flex-row items-center justify-center gap-2 w-fit" asChild>
-                    <a href="mailto:tinglu@gmail.com" >
+                    <a href="mailto:tinglu30@gmail.com" >
                         <Mail className="w-4 h-4" />
                     </a>
                 </Button>                
