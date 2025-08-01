@@ -16,6 +16,13 @@ export const projects = [
         github: "https://github.com/tinglu12/partygraph-front",
     },
     {
+        name: "PodSkim",
+        description: "PodSkim is a podcast summarizer that uses AI to summarize podcasts and provide insights.",
+        img: "/projects/podskim.png",
+        tech: ["React"],
+        website: "https://podskim.com/about",
+    },
+    {
         name: "DinoSnap",
         description: "DinoSnap is a VR game that allows you to take photos of dinosaurs.",
         img: "/projects/bigdino.png",
